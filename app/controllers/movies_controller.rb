@@ -7,6 +7,7 @@ class MoviesController < ApplicationController
 
 
     def create
+      byebug
         movie = Movie.create(movie_params)
         if params["characters_attributes"]['0']
           if params["characters_attributes"]['0']["name"] == ""
